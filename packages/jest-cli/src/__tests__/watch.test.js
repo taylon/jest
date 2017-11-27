@@ -105,7 +105,7 @@ describe('Watch mode flows', () => {
     // jest.doMock('is-ci', () => false);
     jest.unmock('jest-util');
     const util = require('jest-util');
-    util.isInteractive = false;
+    util.isInteractive = true;
 
     const ci_watch = require('../watch').default;
     ci_watch(globalConfig, contexts, pipe, hasteMapInstances, stdin);
@@ -158,7 +158,7 @@ describe('Watch mode flows', () => {
     // jest.doMock('is-ci', () => false);
     jest.unmock('jest-util');
     const util = require('jest-util');
-    util.isInteractive = false;
+    util.isInteractive = true;
 
     const ci_watch = require('../watch').default;
     ci_watch(
